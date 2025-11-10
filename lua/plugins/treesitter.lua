@@ -1,0 +1,27 @@
+return {
+  {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
+    version = false,
+    main = 'nvim-treesitter.config',
+    build = ':TSUpdate',
+    event = { 'BufReadPost', 'BufNewFile' },
+    cmd = { 'TSUpdate', 'TSInstall', 'TSLog', 'TSUninstall' },
+    opts = {
+      indent = { enable = true },
+      highlight = { enable = true },
+      folds = { enable = true },
+      auto_install = true,
+      ensure_installed = {
+        'json',
+        'jsonc',
+        'lua',
+        'luadoc',
+        'luap',
+        'toml',
+        'xml',
+        'yaml',
+      },
+    },
+  },
+}
