@@ -46,19 +46,4 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     opts = {},
   },
-
-  {
-    'folke/noice.nvim',
-    event = 'VeryLazy',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
-    },
-    opts = {},
-    config = function(_, opts)
-      require('notify').setup(vim.tbl_extend('keep', {
-        background_colour = '#000000',
-      }, opts))
-    end,
-  },
 }
