@@ -37,11 +37,13 @@ opt.ignorecase = true -- 默认忽略大小写
 opt.smartcase = true -- 包含大写时开启大小写敏感
 
 -- =========================
--- ✅ 折叠配置（Treesitter）
+-- ✅ 折叠配置
 -- =========================
-o.foldmethod = 'expr' -- 使用表达式折叠
-o.foldexpr = 'nvim_treesitter#foldexpr()' -- Treesitter 折叠
-opt.foldlevel = 99 -- 默认展开所有折叠
+o.foldcolumn = '1'
+o.foldlevel = 99 -- 默认展开所有折叠
+o.foldlevelstart = 99
+o.foldenable = true
+o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldinner: ,foldclose:'
 
 -- =========================
 -- ✅ 操作习惯
